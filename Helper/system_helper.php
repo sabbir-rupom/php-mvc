@@ -104,7 +104,6 @@ if (!function_exists('getMethod')) {
     }
 }
 
-
 if (!function_exists('baseUrl')) {
 
     /**
@@ -223,21 +222,18 @@ if (!function_exists('saniTizeFilters')) {
     function saniTizeFilters()
     {
         return [
-          FILTER_SANITIZE_EMAIL,
-          FILTER_SANITIZE_ENCODED,
-          FILTER_SANITIZE_MAGIC_QUOTES,
-          FILTER_SANITIZE_NUMBER_FLOAT,
-          FILTER_SANITIZE_NUMBER_INT,
-          FILTER_SANITIZE_SPECIAL_CHARS,
-          FILTER_SANITIZE_FULL_SPECIAL_CHARS,
-          FILTER_SANITIZE_STRING,
-          FILTER_SANITIZE_STRIPPED,
-          FILTER_SANITIZE_URL,
-          FILTER_UNSAFE_RAW
+            FILTER_SANITIZE_EMAIL,
+            FILTER_SANITIZE_ENCODED,
+            FILTER_SANITIZE_ADD_SLASHES,
+            FILTER_SANITIZE_NUMBER_FLOAT,
+            FILTER_SANITIZE_NUMBER_INT,
+            FILTER_SANITIZE_SPECIAL_CHARS,
+            FILTER_SANITIZE_FULL_SPECIAL_CHARS,
+            FILTER_SANITIZE_URL,
+            FILTER_UNSAFE_RAW,
         ];
     }
 }
-
 
 if (!function_exists('getProtocol')) {
 
@@ -246,7 +242,7 @@ if (!function_exists('getProtocol')) {
      *
      * @return string http or https
      */
-    function getProtocol(string $url): string
+    function getProtocol(): string
     {
         if (
             (isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) === 'on') ||
@@ -276,9 +272,9 @@ if (!function_exists('requestUri')) {
 if (!function_exists('getDbConnection')) {
 
     /**
-     * Get requested URL
+     * Get DB Connection PDO Object
      *
-     * @return string Request URL
+     * @return PDO PDO Object
      */
     function getDbConnection(): PDO
     {

@@ -283,13 +283,13 @@ abstract class Model
      */
     public function delete(array $filterParams = [])
     {
-        if (!isset($this->{$table})) {
-            throw new Exception('The ' . get_called_class() . ' is not initiated properly.');
+        if (!isset($this->table)) {
+            throw new \Exception('The ' . get_called_class() . ' model is not initiated properly.');
         }
 
         list($conditionSql, $values) = self::constructQuery($filterParams);
 
-        $stmt = $pdo->prepare('DELETE FROM ' . $this->table . ' ' . $conditionSql);
+        $stmt = $this->db->prepare('DELETE FROM ' . $this->table . ' ' . $conditionSql);
         $stmt->execute($values);
 
         return true;
