@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputEntry">Entry By</label>
+                    <label for="inputEntry">Entry By [User ID]</label>
                     <input type="number" class="form-control" id="inputEntry" name="entry_by" required="true" placeholder="number only">
                 </div>
                 <div class="text-center">
