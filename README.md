@@ -11,3 +11,5 @@
 * After finishing all above steps, run the website project from browser [ http://localhost/php-mvc/public , or http://virtual-host.local ]
 
 #### This project is entirely based on study purpose for advanced PHP programming. Feel free to browse project codes and play around with it.  
+
+If you liked my approach, don't forget to give a star rating to this project repository.
