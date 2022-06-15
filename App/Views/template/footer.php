@@ -9,7 +9,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center">
-                custom-mvc-project-xpeed © <a href="https://sabbirrupom.com/" target="_blank">Sabbir Hossain</a>
+                Custom PHP MVC © <a href="https://github.com/sabbir-rupom" target="_blank">Sabbir Hossain</a>
             </div>
         </div>
     </div>
