@@ -9,3 +9,5 @@
 * Please check proper .htaccess file is included under public directory or not
 * Run command 'composer install' from project root directory
 * After finishing all above steps, run the website project from browser [ http://localhost/php-mvc/public , or http://virtual-host.local ]
+
+#### This project is entirely based on study purpose for advanced PHP programming. Feel free to browse project codes and play around with it.  
