@@ -22,7 +22,7 @@ class Report extends AppController
 
         $orderArray = $filterArray = [];
 
-        $orderBy = trim(inputGet('order_by', FILTER_SANITIZE_URL));
+        $orderBy = inputGet('order_by', FILTER_SANITIZE_URL);
         if (in_array($orderBy, ['entry_at', 'entry_by'])) {
             $direction = strtolower(inputGet('direction', FILTER_SANITIZE_URL)) === 'desc' ? 'desc' : 'asc';
             $orderArray = [$orderBy => $direction];
